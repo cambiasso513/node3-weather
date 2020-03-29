@@ -10,7 +10,7 @@ const weatherforecast = (longitude, latitude, callback) => {
             callback('Unable to find the location!', undefined)
         }
         else{
-            callback(undefined, `${body.currently.summary}. The current temperature is ${body.currently.temperature}. The chance of rain is ${body.currently.precipProbability}.`)
+            callback(undefined, `${body.currently.summary}. The current temperature is ${body.currently.temperature}. The chance of rain is ${body.currently.precipProbability}. The highest temperature is ${body.daily.data[0].temperatureHigh}.`)
         }
     })
 };
